@@ -25,10 +25,11 @@ def criar_app():
     app.register_blueprint(pedido_bp)
     app.register_blueprint(detalhePedido_bp)
 
-    app.run(debug=True)
+    return app
     
-#Comparando se é o módulo principal que está em execução (main)
+#Instancia da Aplicação
+app = criar_app()
+
+
 if __name__ == '__main__':
-    app = criar_app()
-
-
+    app.run(debug=True)
